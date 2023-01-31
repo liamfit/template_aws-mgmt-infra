@@ -1,0 +1,18 @@
+name: Run terraform plan and apply from PR
+
+on:
+  pull_request:
+    paths:
+      - '*.tf'
+
+jobs:
+  call-terraform-workflow:
+    permissions:
+      pull-requests: write
+      id-token: write
+      contents: read
+    uses: liamfit/workflow-library/.github/workflows/terraform-plan-and-apply.yml@main
+    with:
+      environment: mgmt
+      terraform-version: 1.3.6
+    secrets: inherit

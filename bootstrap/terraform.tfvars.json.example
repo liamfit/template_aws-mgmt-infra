@@ -9,9 +9,9 @@
         "group-cost-centre": "",
         "group-opco-code": "",
         "group-environment-type": "nlv",
-        "group-iac-script-name​": "mgmt-infra",
-        "group-iac-stack-state-file​": "bootstrap/terraform.tfstate",
-        "group-project​": ""
+        "group-iac-script-name": "mgmt-infra",
+        "group-iac-stack-state-file": "bootstrap/terraform.tfstate",
+        "group-project": ""
     },
     "infra_prefix": "",
     "region": ""
