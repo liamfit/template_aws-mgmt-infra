@@ -28,14 +28,7 @@
         {
             "Effect": "Allow",
             "Action": [
-                "ssm:DescribeParameters"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ssm:GetParameters"
+                "ssm:GetParameter"
             ],
             "Resource": "arn:aws:ssm:${region}:${account_id}:parameter/terraform.tfvars.json"
         }
