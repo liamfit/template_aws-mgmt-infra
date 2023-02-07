@@ -1,8 +1,6 @@
 {
     "accounts": {
         "dev": "",
-        "staging": "",
-        "uat": "",
         "prod": ""
     },
     "default_tags": {
