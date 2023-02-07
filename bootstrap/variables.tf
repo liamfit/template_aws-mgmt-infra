@@ -17,6 +17,14 @@ variable "dynamodb_table" {
   default = "terraform-state"
 }
 
+variable "github_role_name" {
+  type    = string
+}
+
+variable "accounts" {
+  type = map(any)
+}
+
 variable "default_tags" {
   type = map(any)
 }
