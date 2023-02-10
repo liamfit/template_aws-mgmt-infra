@@ -29,13 +29,12 @@ New resources should be created in the root directory.
 4. Once approved, `terraform apply` will run automatically
 
 
-## How do I give Github additional permissions to create new terraform resources in the management account?
+## How do I give Github Actions permissions to create new terraform resources in the management account?
 
 The policy for the Github Actions IAM role in the management account is contained in the bootstrap directory. You will need to deploy changes from your local machine using your own AWS credentials.
 
 1. Modify `github_policy.tf` as required
 2. Run `terraform apply`
 
-| NOTE: You should create a workload account policy with more restrictive permissions. |
-| By default it is configured with `AdministratorAccess`.                              |
-|--------------------------------------------------------------------------------------|
+|<table><td>:warning: You should create a workload account policy with more restrictive permissions
+By default it is configured with `AdministratorAccess`</td></table> 
