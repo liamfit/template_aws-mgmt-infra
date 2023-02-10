@@ -36,5 +36,6 @@ The policy for the Github Actions IAM role in the management account is containe
 1. Modify `github_policy.tf` as required
 2. Run `terraform apply`
 
-// TODO
-Create a workload account policy with more restrictive permissions (as it is currently configured to have `AdministratorAccess`).
+| NOTE: You should create a workload account policy with more restrictive permissions. |
+| By default it is configured with `AdministratorAccess`.                              |
+|--------------------------------------------------------------------------------------|
