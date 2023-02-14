@@ -12,13 +12,3 @@ output "github_actions_role_mgmt_account" {
   description = "Github Actions IAM role arn for management account"
   value       = module.oidc_github.iam_role_arn
 }
-
-output "github_actions_role_dev_account" {
-  description = "Github Actions IAM role arn for dev account"
-  value       = module.iam_iam-assumable-role-dev.iam_role_arn
-}
-
-output "github_actions_role_prod_account" {
-  description = "Github Actions IAM role arn for prod account"
-  value       = module.iam_iam-assumable-role-prod.iam_role_arn
-}

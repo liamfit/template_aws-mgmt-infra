@@ -1,16 +1,15 @@
 {
     "accounts": {
-        "dev": "",
-        "prod": ""
+        "dev": "111111111111",
+        "test": "222222222222",
+        "prod": "333333333333"
     },
     "default_tags": {
-        "group-cost-centre": "",
+        "group-cost-centre": "44444",
         "group-opco-code": "",
-        "group-environment-type": "nlv",
-        "group-iac-script-name": "mgmt-infra",
-        "group-iac-stack-state-file": "bootstrap/terraform.tfstate",
-        "group-project": ""
+        "group-project": "my-project-name"
     },
-    "infra_prefix": "",
-    "region": ""
+    "infra_prefix": "my-project-name",
+    "region": "eu-west-1",
+    "github_role_name": "github-actions-role"
 }

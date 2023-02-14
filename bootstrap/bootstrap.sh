@@ -68,7 +68,7 @@ if [[ "${GH_SECRETS}" == 'y' ]]; then
 
     # Get Github secrets values
     AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
-    AWS_ROLE=$(terraform output -raw github_actions_role)
+    AWS_ROLE=$(terraform output -raw github_actions_role_mgmt_account)
     AWS_REGION=$(jq -r .region terraform.tfvars.json)
     TF_STATE_BUCKET=$(terraform output -raw tf_state_bucket)
     TF_STATE_LOCKING_TABLE=$(terraform output -raw tf_state_locking_table)

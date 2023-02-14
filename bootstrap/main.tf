@@ -30,7 +30,8 @@ resource "aws_dynamodb_table" "terraform_state" {
 }
 
 module "oidc_github" {
-  source  = "github.com/liamfit/terraform-aws-oidc-github?ref=dd52585"
+  source  = "unfunco/oidc-github/aws"
+  version = "1.2.0"
 
   attach_read_only_policy	= false
   iam_role_name           = "${var.github_role_name}"
@@ -52,6 +53,21 @@ module "iam_iam-assumable-role-dev" {
 
   providers = {
     aws = aws.dev
+  }
+
+  attach_admin_policy = true
+  create_role         = true
+  role_name           = "${var.github_role_name}"
+  role_requires_mfa   = false
+  trusted_role_arns   = [ "${module.oidc_github.iam_role_arn}" ]
+}
+
+module "iam_iam-assumable-role-test" {
+  source   = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
+  version  = "5.11.1"
+
+  providers = {
+    aws = aws.test
   }
 
   attach_admin_policy = true
